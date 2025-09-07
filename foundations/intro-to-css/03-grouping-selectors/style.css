@@ -1,1 +1,12 @@
-/* Add CSS Styling */
+.noClickMeButton,
+.clickMeButton {
+    font-family: Helveticaи, Times New Roman, sans-serif;
+    font-size: 28px;
+}
+.clickMeButton {
+    background-color: black;
+    color: white;
+}
+.noClickMeButton {
+    background-color: yellow;
+}
