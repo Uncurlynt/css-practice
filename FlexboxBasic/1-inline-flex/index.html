@@ -1,0 +1,42 @@
+flex/inline-flex
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flex vs Inline-Flex</title>
+    <link href='style.css' rel='stylesheet' />
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet'>
+</head>
+<body>
+
+<h1>Пример с <code>display: flex</code></h1>
+<p>Родители (красная рамка) ведут себя как блоки - занимают всю ширину и встают друг под другом.</p>
+
+<div class='flex-container'>
+    <div class='box'>1</div>
+    <div class='box'>2</div>
+</div>
+
+<div class='flex-container'>
+    <div class='box'>1</div>
+    <div class='box'>2</div>
+</div>
+
+<hr>
+
+<h1>Пример с <code>display: inline-flex</code></h1>
+<p>Родители (зеленая рамка) ведут себя как слова в предложении - встают рядом друг с другом в одну строку.</p>
+
+<div class='inline-flex-container'>
+    <div class='box'>1</div>
+    <div class='box'>2</div>
+</div>
+
+<div class='inline-flex-container'>
+    <div class='box'>1</div>
+    <div class='box'>2</div>
+</div>
+
+<span>&lt;-- Соседний элемент на той же строке</span>
+
+</body>
+</html>

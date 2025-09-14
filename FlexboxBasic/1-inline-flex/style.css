@@ -1,0 +1,49 @@
+
+body {
+    margin: 10px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+hr {
+    margin: 30px 0;
+}
+
+/* --- Стили для примера с display: flex --- */
+.flex-container {
+    display: flex; /* <-- Ключевое свойство */
+
+    /* Визуальные помощники */
+    border: 3px solid red;
+    margin-bottom: 10px; /* Добавим отступ снизу, чтобы было виднее */
+    padding: 5px;
+}
+
+/* --- Стили для примера с display: 1-inline-flex --- */
+.inline-flex-container {
+    display: inline-flex; /* <-- Ключевое свойство */
+
+    /* Визуальные помощники */
+    border: 3px solid green;
+    margin-right: 10px; /* Добавим отступ справа, чтобы было виднее */
+    padding: 5px;
+}
+
+
+/* --- Общие стили для внутренних кубиков --- */
+.box {
+    background-color: dodgerblue;
+    color: white;
+    height: 50px;
+    width: 50px;
+    border: 1px solid turquoise;
+
+    /* Центрируем цифры для красоты */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
