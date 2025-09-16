@@ -1,10 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<h1>align-items</h1>
 
-</body>
-</html>
+<!-- 1. STRETCH (по умолчанию) -->
+<h2>align-items: stretch;</h2>
+<div class="container stretch">
+    <div class="box">Коробка 1</div>
+    <div class="box">Коробка 2 <br> с текстом</div>
+    <div class="box">Коробка 3</div>
+</div>
+
+<!-- 2. FLEX-START -->
+<h2>align-items: flex-start;</h2>
+<div class="container flex-start">
+    <div class="box box-s">Маленькая</div>
+    <div class="box box-l">Большая</div>
+    <div class="box box-m">Средняя</div>
+</div>
+
+<!-- 3. FLEX-END -->
+<h2>align-items: flex-end;</h2>
+<div class="container flex-end">
+    <div class="box box-s">Маленькая</div>
+    <div class="box box-l">Большая</div>
+    <div class="box box-m">Средняя</div>
+</div>
+
+<!-- 4. CENTER -->
+<h2>align-items: center;</h2>
+<div class="container center">
+    <div class="box box-s">Маленькая</div>
+    <div class="box box-l">Большая</div>
+    <div class="box box-m">Средняя</div>
+</div>
+
+<!-- 5. BASELINE -->
+<h2>align-items: baseline;</h2>
+<div class="container baseline">
+    <div class="box"><h1>Aa</h1></div>
+    <div class="box"><h4>Aa</h4></div>
+    <div class="box"><h2>Aa</h2></div>
+</div>

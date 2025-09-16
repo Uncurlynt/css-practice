@@ -1,0 +1,55 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 40px;
+    font-family: monospace;
+}
+
+/* СТИЛИ РОДИТЕЛЯ */
+.container {
+    display: flex;
+    height: 200px; /* Задаем высоту, чтобы было где выравнивать! */
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+}
+
+/* Применяем разные значения align-items */
+.container.stretch    { align-items: stretch; }
+.container.flex-start { align-items: flex-start; }
+.container.flex-end   { align-items: flex-end; }
+.container.center     { align-items: center; }
+.container.baseline   { align-items: baseline; }
+
+
+/* СТИЛИ ДЕТЕЙ */
+.box {
+    width: 130px;
+    background-color: dodgerblue;
+    color: white;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+
+    /* Для наглядности центрируем текст внутри */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Задаем разную высоту для наглядности (кроме примера stretch) */
+.box-s { height: 50px; }
+.box-m { height: 80px; }
+.box-l { height: 120px; }
+
+/* Для примера с baseline убираем жесткую высоту и делаем разный размер шрифта */
+.baseline .box {
+    height: auto;
+    padding: 10px;
+}
+.baseline h1, .baseline h2, .baseline h4 {
+    margin: 0;
+}
