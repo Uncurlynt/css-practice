@@ -1,0 +1,56 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 40px;
+    font-family: monospace;
+}
+
+p {
+    color: #555;
+    max-width: 600px;
+}
+
+/* СТИЛИ РОДИТЕЛЯ */
+.container {
+    display: flex;
+    width: 600px; /* Задаем фиксированную ширину, чтобы было видно эффект */
+    border: 3px solid #ccc;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+/* Применяем разные значения flex-wrap */
+.container-nowrap {
+    flex-wrap: nowrap; /* Значение по умолчанию */
+}
+
+.container-wrap {
+    flex-wrap: wrap;
+}
+
+.container-wrap-reverse {
+    flex-wrap: wrap-reverse;
+    /* Добавим высоту, чтобы было видно, куда они переносятся */
+    height: 220px;
+}
+
+
+/* СТИЛИ ДЕТЕЙ */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: seagreen;
+    color: white;
+    border: 2px solid white;
+    margin: 5px;
+
+    /* Делаем цифры красивыми */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}

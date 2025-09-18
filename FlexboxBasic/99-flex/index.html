@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Свойство 'flex' (shorthand)</h1>
+
+<!-- 1. FLEX: 1 (самый частый) -->
+<h2>flex: 1; (Идеально равные колонки)</h2>
+<p>Все три блока имеют <code>flex: 1</code>. Они делят все пространство поровну.</p>
+<div class="container">
+    <div class="box flex-1">flex: 1</div>
+    <div class="box flex-1">flex: 1</div>
+    <div class="box flex-1">flex: 1</div>
+</div>
+
+<!-- 2. FLEX: AUTO -->
+<h2>flex: auto; (Гибкие, но с учетом контента)</h2>
+<p>Все три блока имеют <code>flex: auto</code>. Они растягиваются, но блок с длинным текстом шире.</p>
+<div class="container">
+    <div class="box flex-auto">Короткий</div>
+    <div class="box flex-auto">Текст подлиннее, чтобы было видно</div>
+    <div class="box flex-auto">Средний текст</div>
+</div>
+
+<!-- 3. FLEX: NONE -->
+<h2>flex: none; ("Жесткий" блок)</h2>
+<p>Левый и правый блок имеют <code>flex: 1</code>, а центральный "упрямый" — <code>flex: none</code>.</p>
+<div class="container">
+    <div class="box flex-1">Я расту</div>
+    <div class="box flex-none">Я жесткий (flex: none)</div>
+    <div class="box flex-1">Я тоже расту</div>
+</div>
+
+<!-- 4. РЕАЛЬНЫЙ МАКЕТ САЙТА -->
+<h2>Пример: Макет сайта</h2>
+<p>Боковые панели имеют фиксированную ширину, а центральный контент (<code>flex: 1</code>) занимает все остальное место.</p>
+<div class="container site-layout">
+    <div class="sidebar">Сайдбар</div>
+    <div class="main-content">Главный контент (flex: 1)</div>
+    <div class="sidebar">Сайдбар</div>
+</div>
+</body>
+</html>

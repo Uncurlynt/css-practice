@@ -1,0 +1,76 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f7f6;
+    padding: 20px;
+}
+
+/* =================================
+   УРОВЕНЬ 1: Контейнер для карточек
+   ================================= */
+.card-wrapper {
+    display: flex; /* <-- Первый flex! */
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+/* ===============================================
+   УРОВЕНЬ 2: Сама карточка (это и элемент, и контейнер)
+   =============================================== */
+.card {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden; /* Скрываем все, что вылезает за скругленные углы */
+
+    /* А вот и второй flex! */
+    display: flex;
+    flex-direction: column; /* Выстраиваем содержимое карточки в столбик */
+}
+
+/* --- Дети карточки --- */
+.card-image {
+    height: 200px;
+    background-color: #e0e0e0;
+    background-image: linear-gradient(45deg, #e0e0e0 25%, #f0f0f0 25%, #f0f0f0 50%, #e0e0e0 50%, #e0e0e0 75%, #f0f0f0 75%, #f0f0f0 100%);
+    background-size: 56.57px 56.57px;
+}
+
+.card-body {
+    padding: 20px;
+    /* Это свойство заставляет блок с текстом занять все доступное место,
+       тем самым прижимая подвал (footer) к низу карточки. */
+    flex-grow: 1;
+}
+.card-body h3 { margin-top: 0; }
+.card-body p { color: #666; font-size: 15px; }
+
+
+/* ===============================================
+   УРОВЕНЬ 3: Подвал карточки
+   =============================================== */
+.card-footer {
+    padding: 20px;
+    border-top: 1px solid #eee;
+
+    /* И третий, вложенный flex! */
+    display: flex;
+    justify-content: space-between; /* Расталкиваем цену и кнопку */
+    align-items: center; /* Выравниваем их по вертикали */
+}
+/* --- Дети подвала --- */
+.price {
+    font-size: 24px;
+    font-weight: bold;
+}
+.buy-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.buy-button:hover { background-color: #0056b3; }

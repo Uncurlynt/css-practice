@@ -1,0 +1,48 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 40px;
+    font-family: monospace;
+}
+p { color: #555; }
+
+/* СТИЛИ РОДИТЕЛЯ ("книжный шкаф") */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* <--- ОБЯЗАТЕЛЬНОЕ УСЛОВИЕ */
+    height: 400px;   /* <--- ОБЯЗАТЕЛЬНОЕ УСЛОВИЕ (нужно свободное место) */
+    width: 550px;
+
+    background-color: #f0f0f0;
+    border: 3px solid #ccc;
+    padding: 10px;
+}
+
+/* Применяем разные значения align-content */
+#stretch       { align-content: stretch; }
+#flex-start    { align-content: flex-start; }
+#flex-end      { align-content: flex-end; }
+#center        { align-content: center; }
+#space-between { align-content: space-between; }
+#space-around  { align-content: space-around; }
+
+
+/* СТИЛИ ДЕТЕЙ ("книги") */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #6f42c1; /* фиолетовый */
+    color: white;
+    border: 2px solid white;
+    margin: 5px;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}

@@ -1,0 +1,48 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+h2 { margin-top: 40px; font-family: monospace; }
+p { color: #555; max-width: 600px; }
+
+/* СТИЛИ РОДИТЕЛЯ */
+.container {
+    display: flex;
+    background-color: #f0f0f0;
+    border: 3px solid #ccc;
+    padding: 10px;
+    gap: 10px;
+}
+
+/* СТИЛИ ДЕТЕЙ */
+.box {
+    /* По умолчанию у всех order: 0 */
+    flex: 1; /* Растянем их для красоты */
+    padding: 20px;
+    height: 100px;
+    background-color: #6c757d; /* серый */
+    color: white;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* А ТЕПЕРЬ ПРИМЕНЯЕМ ORDER */
+.first-place {
+    order: -1;
+    background-color: #28a745; /* Зеленый победитель */
+}
+
+.last-place {
+    order: 2;
+    background-color: #dc3545; /* Красный "проигравший" */
+}
+
+.almost-last-place {
+    order: 1;
+    background-color: #ffc107; /* Желтый */
+}

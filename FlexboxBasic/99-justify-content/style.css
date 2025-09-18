@@ -1,0 +1,41 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 40px;
+    font-family: monospace;
+}
+
+/* СТИЛИ РОДИТЕЛЯ ("парковка") */
+.container {
+    display: flex;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    padding: 10px;
+    height: 100px;
+}
+
+/* Применяем разные команды "парковщику" */
+#flex-start    { justify-content: flex-start; }
+#flex-end      { justify-content: flex-end; }
+#center        { justify-content: center; }
+#space-between { justify-content: space-between; }
+#space-around  { justify-content: space-around; }
+
+
+/* СТИЛИ ДЕТЕЙ ("машины") */
+.box {
+    width: 100px;
+    background-color: #007bff; /* синий */
+    color: white;
+    border-radius: 5px;
+
+    /* Делаем цифры красивыми и центрированными */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}

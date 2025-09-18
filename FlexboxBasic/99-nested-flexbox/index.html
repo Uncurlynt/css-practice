@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Nested Flexboxes (Вложенные флексбоксы)</h1>
+
+<!-- УРОВЕНЬ 1: ГЛАВНЫЙ КОНТЕЙНЕР ДЛЯ КАРТОЧЕК -->
+<div class="card-wrapper">
+
+    <!-- Карточка 1 -->
+    <div class="card"> <!-- Это flex-элемент, но он же и flex-контейнер для своего содержимого -->
+        <div class="card-image"></div>
+        <div class="card-body">
+            <h3>Крутой товар №1</h3>
+            <p>Это описание товара. Он очень полезный и сделан с помощью вложенных флексбоксов.</p>
+        </div>
+        <!-- УРОВЕНЬ 3: ПОДВАЛ КАРТОЧКИ -->
+        <div class="card-footer">
+            <span class="price">1999 ₽</span>
+            <button class="buy-button">Купить</button>
+        </div>
+    </div>
+
+    <!-- Карточка 2 (точно такая же) -->
+    <div class="card">
+        <div class="card-image"></div>
+        <div class="card-body">
+            <h3>Супер товар №2</h3>
+            <p>Этот товар еще лучше, потому что он наглядно демонстрирует мощь CSS Flexbox.</p>
+        </div>
+        <div class="card-footer">
+            <span class="price">2499 ₽</span>
+            <button class="buy-button">Купить</button>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

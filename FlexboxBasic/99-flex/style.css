@@ -1,0 +1,52 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+h2 { margin-top: 40px; font-family: monospace; }
+p { color: #555; }
+
+/* СТИЛИ РОДИТЕЛЯ */
+.container {
+    display: flex;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    padding: 10px;
+    gap: 10px;
+}
+
+/* СТИЛИ ДЕТЕЙ */
+.box {
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+/* Применяем разные значения flex */
+.flex-1 {
+    flex: 1;
+    background-color: #007bff;
+}
+
+.flex-auto {
+    flex: auto;
+    background-color: #28a745;
+}
+
+.flex-none {
+    flex: none;
+    background-color: #dc3545;
+    padding: 20px 40px; /* Добавим ширины, чтобы было виднее */
+}
+
+/* СТИЛИ ДЛЯ МАКЕТА САЙТА */
+.site-layout .sidebar {
+    width: 150px;
+    flex: 0 0 150px; /* Можно и так: не расти, не сжиматься, база 150px */
+    background-color: #6c757d;
+}
+.site-layout .main-content {
+    flex: 1; /* А этот заберет все остальное! */
+    background-color: #ffc107;
+    color: #333;
+}

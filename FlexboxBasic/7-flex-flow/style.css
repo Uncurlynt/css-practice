@@ -1,0 +1,46 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+h2 { margin-top: 40px; font-family: monospace; }
+p { color: #555; max-width: 500px; line-height: 1.4; }
+
+/* СТИЛИ РОДИТЕЛЯ */
+.container {
+    display: flex;
+    width: 500px;
+    border: 3px solid #ccc;
+    padding: 10px;
+}
+
+/* Применяем стили разными способами */
+#long-way {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#short-way {
+    flex-flow: row wrap;
+}
+
+#another-way {
+    flex-flow: row-reverse wrap;
+}
+
+
+/* СТИЛИ ДЕТЕЙ */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #17a2b8; /* бирюзовый */
+    color: white;
+    border: 2px solid white;
+    margin: 5px;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}

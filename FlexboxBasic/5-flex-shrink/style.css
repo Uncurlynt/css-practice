@@ -1,0 +1,45 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+h2 { margin-top: 40px; }
+p { color: #555; }
+
+/* СТИЛИ РОДИТЕЛЯ */
+.container {
+    display: flex;
+    width: 500px; /* <--- Узкий родитель */
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    padding: 10px;
+    margin: 0 auto; /* Центрируем контейнер для красоты */
+}
+
+/* СТИЛИ ДЕТЕЙ */
+.box {
+    /* По умолчанию у всех flex-shrink: 1 */
+    width: 200px; /* <--- Широкие дети, которые не помещаются */
+    height: 100px;
+    background-color: dodgerblue;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+/* ЗАДАЕМ РАЗНЫЕ ЗНАЧЕНИЯ FLEX-SHRINK */
+.no-shrink {
+    flex-shrink: 0;
+    background-color: #dc3545; /* Красный цвет для упрямого блока */
+}
+
+.super-shrink {
+    flex-shrink: 2;
+    background-color: #28a745; /* Зеленый для "мягкого" блока */
+}
