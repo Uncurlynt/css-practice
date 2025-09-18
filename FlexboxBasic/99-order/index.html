@@ -1,21 +1,23 @@
-<h1>align-self (свойство-бунтарь)</h1>
+<h1>order (изменение порядка)</h1>
 
-<!-- 1. ПОСЛУШНЫЙ КЛАСС -->
-<h2>1. Общее правило для всех (align-items: center)</h2>
-<p>Здесь нет "бунтарей", все слушают родителя.</p>
+<!-- 1. ЕСТЕСТВЕННЫЙ ПОРЯДОК -->
+<h2>1. Порядок по умолчанию (как в HTML)</h2>
+<p>Все элементы имеют <code>order: 0</code>, поэтому они идут по порядку 1-2-3-4-5.</p>
 <div class="container">
-    <div class="box">Я послушный</div>
-    <div class="box">Я тоже</div>
-    <div class="box">И я</div>
-    <div class="box">Мы все по центру</div>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
 </div>
 
-<!-- 2. КЛАСС С БУНТАРЯМИ -->
-<h2>2. А здесь есть "бунтари" с align-self!</h2>
-<p>Родитель все еще говорит "всем в центр", но некоторые его не слушают.</p>
+<!-- 2. ИЗМЕНЕННЫЙ ПОРЯДОК -->
+<h2>2. Порядок, измененный с помощью 'order'</h2>
+<p>Хотя в HTML все так же, визуально блоки переставлены.</p>
 <div class="container">
-    <div class="box rebel-start">Я наверху (flex-start)</div>
-    <div class="box">Я слушаюсь (auto)</div>
-    <div class="box rebel-end">Я внизу (flex-end)</div>
-    <div class="box rebel-stretch">Я растянулся (stretch)</div>
+    <div class="box">Я был №1 (order: 0)</div>
+    <div class="box last-place">Я был №2, но теперь ПОСЛЕДНИЙ (order: 2)</div>
+    <div class="box">Я был №3 (order: 0)</div>
+    <div class="box almost-last-place">Я был №4, но теперь предпоследний (order: 1)</div>
+    <div class="box first-place">Я был №5, но теперь ПЕРВЫЙ (order: -1)</div>
 </div>

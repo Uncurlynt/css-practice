@@ -3,23 +3,25 @@ body {
     padding: 20px;
 }
 h2 { margin-top: 40px; font-family: monospace; }
-p { color: #555; max-width: 600px; }
+p { color: #555; }
 
-/* СТИЛИ РОДИТЕЛЯ */
+/* СТИЛИ РОДИТЕЛЯ ("УЧИТЕЛЬ") */
 .container {
     display: flex;
+    height: 250px;
     background-color: #f0f0f0;
     border: 3px solid #ccc;
-    padding: 10px;
     gap: 10px;
+    padding: 10px;
+
+    /* ОБЩИЙ ПРИКАЗ ДЛЯ ВСЕХ: */
+    align-items: center;
 }
 
-/* СТИЛИ ДЕТЕЙ */
+/* СТИЛИ ДЕТЕЙ ("УЧЕНИКИ") */
 .box {
-    /* По умолчанию у всех order: 0 */
-    flex: 1; /* Растянем их для красоты */
-    padding: 20px;
-    height: 100px;
+    width: 120px;
+    min-height: 60px;
     background-color: #6c757d; /* серый */
     color: white;
     border-radius: 5px;
@@ -31,18 +33,20 @@ p { color: #555; max-width: 600px; }
     font-size: 16px;
 }
 
-/* А ТЕПЕРЬ ПРИМЕНЯЕМ ORDER */
-.first-place {
-    order: -1;
-    background-color: #28a745; /* Зеленый победитель */
+/* А ТЕПЕРЬ СТИЛИ ДЛЯ БУНТАРЕЙ */
+.rebel-start {
+    align-self: flex-start;
+    background-color: #007bff; /* синий */
 }
 
-.last-place {
-    order: 2;
-    background-color: #dc3545; /* Красный "проигравший" */
+.rebel-end {
+    align-self: flex-end;
+    background-color: #28a745; /* зеленый */
 }
 
-.almost-last-place {
-    order: 1;
-    background-color: #ffc107; /* Желтый */
+.rebel-stretch {
+    align-self: stretch;
+    background-color: #dc3545; /* красный */
+    /* Важно: чтобы stretch сработал, у элемента не должно быть жесткой высоты */
+    height: auto;
 }
