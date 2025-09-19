@@ -22,7 +22,7 @@ hr {
     padding: 5px;
 }
 
-/* --- Стили для примера с display: 1-inline-flex --- */
+/* --- Стили для примера с display: 01-inline-flex --- */
 .inline-flex-container {
     display: inline-flex; /* <-- Ключевое свойство */
 

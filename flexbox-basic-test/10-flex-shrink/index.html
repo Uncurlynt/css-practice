@@ -1,0 +1,28 @@
+<h1>flex-shrink</h1>
+
+<!-- 1. ВСЕ СЖИМАЮТСЯ (по умолчанию) -->
+<h2>1. Все готовы сжиматься (flex-shrink: 1)</h2>
+<p>Контейнер (500px) уже, чем сумма блоков (600px). Все блоки сжались, чтобы поместиться.</p>
+<div class="container">
+    <div class="box">Я должен быть 200px</div>
+    <div class="box">Я должен быть 200px</div>
+    <div class="box">Я должен быть 200px</div>
+</div>
+
+<!-- 2. ОДИН ОТКАЗЫВАЕТСЯ СЖИМАТЬСЯ -->
+<h2>2. Один блок "упрямый" (flex-shrink: 0)</h2>
+<p>Красный блок сохранил свои 200px. Остальные два сжались еще сильнее, чтобы это компенсировать.</p>
+<div class="container">
+    <div class="box">Я сжимаюсь</div>
+    <div class="box no-shrink">Я НЕ СЖИМАЮСЬ (flex-shrink: 0)</div>
+    <div class="box">Я сжимаюсь</div>
+</div>
+
+<!-- 3. ОДИН СЖИМАЕТСЯ СИЛЬНЕЕ -->
+<h2>3. Один блок "мягкий" (flex-shrink: 2)</h2>
+<p>Зеленый блок взял на себя больше "удара" и сжался сильнее, чем его синие соседи.</p>
+<div class="container">
+    <div class="box">flex-shrink: 1</div>
+    <div class="box super-shrink">flex-shrink: 2</div>
+    <div class="box">flex-shrink: 1</div>
+</div>
